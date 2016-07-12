@@ -1,0 +1,11 @@
+cytoolz==0.8.0
+langid==1.1.6
+numpy==1.11.1
+oauthlib==1.1.2
+pytz==2016.4
+requests==2.10.0
+requests-oauthlib==0.6.2
+six==1.10.0
+toolz==0.8.0
+tweepy==3.5.0
+ujson==1.35
