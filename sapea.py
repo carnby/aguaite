@@ -32,7 +32,7 @@ class Listener(tweepy.StreamListener):
             return False
 
     def on_data(self, data):
-        print(repr(data))
+        logging.debug(data)
         self.fd.write(data)
         delta_time = time.time() - self.start_time
 
