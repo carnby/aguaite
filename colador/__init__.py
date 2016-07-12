@@ -304,7 +304,7 @@ class Colador(object):
             if not key in tweet:
                 print('warning: missing key', key)
 
-    
+
     def parse_twitter_date(self, text):
         naive_datetime = datetime.datetime.strptime(text, self.twitter_date_format).replace(tzinfo=pytz.UTC)
         #dt = pytz.timezone(PYTZ_TIMEZONE).localize(naive_datetime)
@@ -357,3 +357,9 @@ def normalize_str(s, encoding='utf-8'):
     s = s.lower().strip()
     s = 'ñ'.join(map(remove_accents, s.split('ñ')))
     return s
+
+
+def read_list_from_file(filename):
+    with open(filename, 'r') as f:
+        return list(map(lambda x: x, f.read().split('\n')))
+        

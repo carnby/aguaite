@@ -1,0 +1,10 @@
+{
+    "source_account": "carnby",
+    "project_name": "poketest",
+    "project_data_path": "./projects/cl",
+    "minutes": 5,
+    "search_location_box": [-73.655740,-37.944243,-72.090433,-34.879482],
+    "log_level": 10,
+    "storage_path": "./test_crawl",
+    "filtered_path": "./test_cleaned"
+}
