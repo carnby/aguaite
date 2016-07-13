@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from colador.strtools import normalize_str, remove_accents, read_list_from_file
 import time
 import datetime
 import logging
@@ -6,13 +7,11 @@ import tweepy
 import sys
 import gzip
 import os
-
 try:
     import ujson as json
 except ImportError:
     import json
 
-from colador import normalize_str, remove_accents, read_list_from_file
 
 class Listener(tweepy.StreamListener):
     def __init__(self, fd, time_limit):

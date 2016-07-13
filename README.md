@@ -1,6 +1,19 @@
+# Aguaite
+
+A Python 3 tool to crawl tweets using the Streaming API. The name comes from the chilean slang _"al aguaite"_, which means _to await_.
+
+## Commands
+
+Currently the tool has two scripts.
+
+  * sapea.py: crawls tweets using project-specific query parameters.
+  * cuela.py: cleans the crawled tweets using project-specific settings.
+
 ## Settings
 
-keys.json
+In addition to project data (see the example folder `projects/cl`), the scripts need at least two configuration files: one for authentication and one for settings.
+
+### keys.json
 
 ```
 {
@@ -11,7 +24,7 @@ keys.json
 }
 ```
 
-config.json
+### config.json
 
 ```
 {
@@ -26,7 +39,6 @@ config.json
 }
 ```
 
+## Google Big Query
 
-## Upload to Google Cloud Storage
-
-gsutil cp 201410_consolidated.json.gz gs://aurora-twittera/tweets/
+The file `schema.json` contains a schema definition to use in Google Big Query with the results from the `cuela.py` script.
